@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body{
+          background-color: rgb(181, 219, 242);
+          background-size:cover;
+       }
+        .cal{
+            background-color:rgb(170, 229, 480);
+            position: absolute;
+            left: 30%;
+            top: 30px;
+            width: 280px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .ab{
+            position: absolute;
+            top:197px;
+            left:6px;
+        }
+        button{
+            width: 64px;
+            height: 60px;
+            font-size: larger;
+            background-color: rgb(170, 229, 480);
+            border-radius: 50px;
+            border: none;
+            border: 1px inset rgb(170, 229, 480);
+        }
+        /* button:hover{
+             background-color: rgb(170, 229, 480);
+             color: white;  
+        } */
+        input[type="text"]{
+         text-align:right;
+         width: 100%;
+         height: 40px;
+         background-color:inherit;
+         color: black;
+         border: none;
+         padding-right: 30px;
+         outline: 0px;
+       }
+       #getcalvalue{
+          font-size:30px;
+          color: black ;
+       } 
+    </style>
+</head>
+<body>
+    <div class="cal">
+           <!-- <form action="#" method="post">
+                    <input type="text" id="calvalue" placeholder="0"/>
+                    <input type="text" id="getcalvalue">
+           </form> -->
+           <table>
+            <tr>
+                <td>
+                    <input type="text" id="calvalue" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="getcalvalue">
+                </td>
+            </tr>
+           </table>
+           <div class="ab">
+            <table cellspacing="2"></table>
+            <tr>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue2()">AC</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue3()">DEL</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue('%')">%</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getvalue('7')">7</button></td>
+                <td><button type="button" onclick="getvalue('8')">8</button></td>
+                <td><button type="button" onclick="getvalue('9')">9</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getvalue('4')">4</button></td>
+                <td><button type="button" onclick="getvalue('5')">5</button></td>
+                <td><button type="button" onclick="getvalue('6')">6</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getvalue('1')">1</button></td>
+                <td><button type="button" onclick="getvalue('2')">2</button></td>
+                <td><button type="button" onclick="getvalue('3')">3</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getvalue('00')">00</button></td>
+                <td><button type="button" onclick="getvalue('0')">0</button></td>
+                <td><button type="button" onclick="getvalue('.')">.</button></td>
+                <td><button style="background-color: orange;"  type="button" onclick="getvalue1()">=</button></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <script src="calculator.script.js" type="application/javascript"></script>
+</body>
+</html>
